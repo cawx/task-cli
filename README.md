@@ -1,2 +1,2 @@
 # Simple todo CLI application
-made for learning purposes
+made for learning purposes.
