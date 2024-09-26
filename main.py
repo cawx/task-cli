@@ -2,29 +2,34 @@ import argparse
 import json
 from datetime import datetime
 
-parser = argparse.ArgumentParser(description='Simple Task Tracker CLI')
-
-parser.add_argument('operation', choices=['add', 'update', 'delete', 'list'], help='Commands')
-
-parser.add_argument('task_desc', type=str, help='Task description.')
-
-args = parser.parse_args()
-
-if args.operation == 'add':
+def add_task(task):
     timenow = datetime.now().isoformat()
     data = {
-        'id': None,
-        'description': args.task_desc,
+        'id': 1,
+        'description': task,
         'status':'todo',
         'createdAt': timenow,
         'updatedAt': timenow
     }
     with open('todo.json', 'w') as f:
         json.dump(data, f, indent=4)
-elif args.operation == 'update':
-    result = "WIP"
-elif args.operation == 'delete':
-    result = "WIP"
-elif args.operation == 'list':
-    result = "WIP"
+        print("Task successfully added.")
 
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='Simple Task Tracker CLI')
+    parser.add_argument('operation', choices=['add', 'update', 'delete', 'list'], help='Commands')
+    parser.add_argument('task_desc', type=str, help='Task description.')
+    args = parser.parse_args()
+
+    # ADD A NEW TASK
+    if args.operation == 'add':
+        add_task(args.task_desc)
+    # UPDATE A TASK
+    elif args.operation == 'update':
+        result = "WIP"
+    #DELETE A TASK
+    elif args.operation == 'delete':
+        result = "WIP"
+    # LIST ALL TASKS
+    elif args.operation == 'list':
+        result = "WIP"
