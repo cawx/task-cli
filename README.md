@@ -1,3 +1,4 @@
+![taskgif](https://github.com/user-attachments/assets/6e52400e-4e45-46da-ba13-a4d51356cd21)
 # task tracker cli.
 
 basic task tracker cli project made in java. features include:
