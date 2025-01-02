@@ -16,5 +16,5 @@ basic task tracker cli project made in java. features include:
 feel free to.
 
 ## extra
-
+* will add better error handling.
 * yes i did use library for json serialization but it was a necessary one!!
